@@ -1,0 +1,23 @@
+.main {
+  display:table;
+  &:first-child {
+    margin-top:50px;
+  }
+}
+
+.content-container {
+  @include span-columns(10);
+  @include shift(1);
+}
+
+@media (min-width: 771px) {
+  .main {
+    &.active {
+      //transform: translateY(100px);
+    }
+  }
+}
+
+@media (max-width: 770px) {
+
+}
