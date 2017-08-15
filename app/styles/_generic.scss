@@ -44,10 +44,14 @@ body {
 
 header, footer {
     position:fixed;
-    font-family: 'Lato', 'Helvetica', sans-serif;
     text-align:center;
     z-index:100;
-    font-size:18px;
+
+}
+
+header {
+  font-family: 'Lato', 'Helvetica', sans-serif;
+  font-size:18px;
 }
 
 header {
@@ -58,10 +62,69 @@ header {
 footer {
   bottom:0px;
   box-shadow: 0px -2px 2px 1px rgba(100, 100, 100, 0.2);
+  font-size:14px;
 }
 
 a, .highlight {
   color:$dark-terra-cotta;
+  text-decoration: underline;
+}
+
+.welcome-overlay {
+  height:100vh;
+  background-color:white;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  opacity:1;
+  @include transition(opacity 1000ms);
+  &.gone {
+    display:none;
+  }
+  &.off {
+    opacity:0;
+    @include transition(opacity 1000ms);
+  }
+  .text {
+    padding-top:30vh;
+    @include span-columns(6);
+    @include shift(3);
+    text-align:center;
+    font-family:"lato";
+    font-size:36px;
+
+  }
+  button {
+    &:focus {
+      outline: none;
+    }
+    margin-top:15vh;
+    border: 0;
+    background-color:$keppel;
+    display: inline-block;
+    font-size:24px;
+    font-family:"lato";
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 2px;
+    line-height: 1.0em;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    color:white !important;
+    box-shadow: 0px 2px 4px 0px rgba(187,187,187,0.50);
+
+  }
+  img {
+    position:absolute;
+    height:50px;
+    top:20px;
+    right:50px;
+    cursor:pointer;
+  }
+
 }
 
 
