@@ -16,21 +16,22 @@ export default Ember.Controller.extend(Scrolling, {
   },
 
   scrolled: function() {
+    console.log('ping')
     let scrollTop = $(window).scrollTop();
     let sections = this.get("sections");
     let graphs = this.get("graphs");
     let curSection = sections.map(function() {
-      if ($(this).offset().top<(scrollTop+100)&&($(this).offset().top+$(this).height())>scrollTop+300) {
+      if ($(this).offset().top<(scrollTop+150)&&($(this).offset().top+$(this).height())>scrollTop+150) {
         return this;
       }
     });
     let curArticle = graphs.map(function() {
-      if ($(this).offset().top<(scrollTop+100)&&($(this).offset().top+$(this).height())>scrollTop+300) {
+      if ($(this).offset().top<(scrollTop+150)&&($(this).offset().top+$(this).height())>scrollTop+150) {
         return this;
       }
     })
 
-    console.log(curArticle[0].title);
+    //console.log(curArticle[0].title);
     if(curSection){
       this.set('applicationController.sectionName',curSection[0].title);
     }

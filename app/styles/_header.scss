@@ -1,8 +1,43 @@
 header {
+  .contents-overlay {
+    overflow:scroll;
+    background-color:white;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:0;
+    @include transition(height 500ms);
+    img {
+      position: absolute;
+      top:20px;
+      right:50px;
+      height:50px;
+      cursor: pointer;
+    }
+    .outline {
+      padding-top:100px;
+      padding-bottom:200px;
+      @include span-columns(8);
+      @include shift(2);
+
+      li {
+        font-size:24px;
+        text-align:left;
+        margin-top:20px;
+      }
+      ol {
+        &.second {
+          padding-left:100px;
+        }
+      }
+    }
+  }
   .status {
     padding-top:5px;
     display:table;
     margin:0px auto;
+    cursor:pointer;
     & > div {
       float:left;
     }
@@ -11,6 +46,13 @@ header {
       float:left;
       padding-top:1px;
       margin:0px 40px;
+    }
+  }
+  &.show {
+    z-index:1000;
+    .contents-overlay {
+      height:100vh;
+      @include transition(height 500ms);
     }
   }
 }
