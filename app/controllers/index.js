@@ -2,49 +2,40 @@ import Ember from 'ember';
 import Scrolling from 'hcd-gov/mixins/scrolling';
 
 export default Ember.Controller.extend(Scrolling, {
-  lastScrollTop: 0,
-  scrollDirection: null,
-  count: 0,
-  ac:null,
+  applicationController: Ember.inject.controller('application'),
+  sections: Ember.computed(function() {
+    return Ember.$(document).find("section");
+  }),
+  graphs: Ember.computed(function() {
+    return Ember.$(document).find("article");
+  }),
 
   init: function() {
     this._super(...arguments);
     this.bindScrolling();
-    let self = this;
-
-    $(window).on('hashchange', function() {
-      self.scrolled();
-    });
   },
-
-  willDestroy: function() {
-    this.unbindScrolling();
-  },
-
-
 
   scrolled: function() {
-    let lst = this.get('lastScrollTop');
-    let st = $(document).scrollTop();
-    let self = this;
-    if (self.get('ac')) {
-      self.set('ac',false);
-    } else {
-      self.set('ac',true);
-    }
-    //console.log(self.get('ac'));
+    let scrollTop = $(window).scrollTop();
+    let sections = this.get("sections");
+    let graphs = this.get("graphs");
+    let curSection = sections.map(function() {
+      if ($(this).offset().top<(scrollTop+100)&&($(this).offset().top+$(this).height())>scrollTop+300) {
+        return this;
+      }
+    });
+    let curArticle = graphs.map(function() {
+      if ($(this).offset().top<(scrollTop+100)&&($(this).offset().top+$(this).height())>scrollTop+300) {
+        return this;
+      }
+    })
 
-    if (st > lst) {
-      //if(!self.get('scrollDirection') || self.get('scrollDirection')==='up') {
-        self.set('scrollDirection', 'down');
-        //console.log(self.get('scrollDirection'));
-      //}
-    } else {
-      //if(!self.get('scrollDirection') || self.get('scrollDirection')==='down') {
-        self.set('scrollDirection', 'up');
-        //console.log(self.get('scrollDirection'));
-      //}
+    console.log(curArticle[0].title);
+    if(curSection){
+      this.set('applicationController.sectionName',curSection[0].title);
     }
-    this.set('lastScrollTop', st);
-  }
+    if(curSection){
+      this.set('applicationController.graphName',curArticle[0].title);
+    }
+  },
 });

@@ -6,13 +6,23 @@ export default Ember.Component.extend({
   active: false,
   classNames: ["main"],
   classNameBindings: ["active","quote:quote","start:start","end:end","content:content","template1:template1","template2:template2","template3:template3","template4:template4"],
-  attributeBindings: ['style'],
+  tagName: "article",
+  attributeBindings: ['title'],
+  title: null,
+  //attributeBindings: ['style'],
+  /*
   style: function() {
     return new Ember.String.htmlSafe(`opacity: ${this.get('opacity')}`);
   }.property('opacity'),
+  opacity:.1,
+  count:0,
 
 
   scrollActions: Ember.observer('ac', function() {
+    let count = this.get('count');
+    console.log(count);
+    count++
+    this.set('count',count);
     let self = this;
     let scrollTop = $(window).scrollTop();
     let elementOffset = this.$().offset().top;
@@ -29,5 +39,6 @@ export default Ember.Component.extend({
         self.set('opacity',.1);
       }
   })
+  */
 
 });
