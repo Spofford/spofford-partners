@@ -1,13 +1,22 @@
 .main {
   display:table;
+  margin-top:-100px;
+  margin-bottom:-100px;
   &:first-child {
-    margin-top:50px;
+    margin-top:-50px;
+  }
+  &:last-child {
+    margin-bottom:0px;
   }
 }
 
 .content-container {
   @include span-columns(10);
   @include shift(1);
+  padding: 150px 0px;
+  p {
+    margin:0px;
+  }
 }
 
 @media (min-width: 771px) {
