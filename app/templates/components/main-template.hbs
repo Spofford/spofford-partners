@@ -1,3 +1,72 @@
+
 <div class="content-container">
+  {{#if content}}
+
+  {{/if}}
+  {{#if quote}}
+  <div class="bl-corner-decor">
+    <div class="blue-square corner-square"></div>
+    <div class="terra-cotta-square corner-square"></div>
+    <div class="gargoyle-square corner-square"></div>
+  </div>
+  {{/if}}
+  {{#if start}}
+    <div class="tr-corner-decor">
+      <div class="blue-square corner-square"></div>
+      <div class="terra-cotta-square corner-square"></div>
+      <div class="gargoyle-square corner-square"></div>
+    </div>
+  {{/if}}
+  {{#if end}}
+  <div class="br-side-decor">
+    <div class="blue-square corner-square"></div>
+    <div class="terra-cotta-square corner-square"></div>
+    <div class="gargoyle-square corner-square"></div>
+  </div>
+  {{/if}}
+  {{#if template1}}
+    <div class="tl-corner-decor">
+      <div class="blue-square corner-square"></div>
+      <div class="terra-cotta-square corner-square"></div>
+      <div class="gargoyle-square corner-square"></div>
+    </div>
+    <div class="br-corner-decor">
+      <div class="blue-square corner-square"></div>
+      <div class="terra-cotta-square corner-square"></div>
+      <div class="gargoyle-square corner-square"></div>
+    </div>
+  {{/if}}
+  {{#if template2}}
+    <div class="bl-corner-decor">
+      <div class="blue-square corner-square"></div>
+      <div class="terra-cotta-square corner-square"></div>
+      <div class="gargoyle-square corner-square"></div>
+    </div>
+
+    <div class="tl-side-decor">
+      <div class="blue-square corner-square"></div>
+      <div class="terra-cotta-square corner-square"></div>
+      <div class="gargoyle-square corner-square"></div>
+    </div>
+  {{/if}}
+  {{#if template3}}
+    <div class="tr-corner-decor">
+      <div class="blue-square corner-square"></div>
+      <div class="terra-cotta-square corner-square"></div>
+      <div class="gargoyle-square corner-square"></div>
+    </div>
+    <div class="bl-side-decor">
+      <div class="blue-square corner-square"></div>
+      <div class="terra-cotta-square corner-square"></div>
+      <div class="gargoyle-square corner-square"></div>
+    </div>
+  {{/if}}
+  {{#if template4}}
+    <div class="tr-side-decor">
+      <div class="blue-square corner-square"></div>
+      <div class="terra-cotta-square corner-square"></div>
+      <div class="gargoyle-square corner-square"></div>
+    </div>
+  {{/if}}
   {{yield}}
 </div>

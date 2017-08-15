@@ -56,8 +56,10 @@ footer {
 }
 
 @media (max-width: 770px) {
+  body {
+    font-size:16px;
+  }
   .main-container {
     max-width:100%;
-
   }
 }

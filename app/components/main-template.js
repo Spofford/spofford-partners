@@ -5,17 +5,12 @@ export default Ember.Component.extend({
 
   active: false,
   classNames: ["main"],
-  classNameBindings: ["active"],
+  classNameBindings: ["active","quote:quote","start:start","end:end","content:content","template1:template1","template2:template2","template3:template3","template4:template4"],
   attributeBindings: ['style'],
   style: function() {
     return new Ember.String.htmlSafe(`opacity: ${this.get('opacity')}`);
   }.property('opacity'),
 
-  
-
-  didInsertElement: function() {
-
-  },
 
   scrollActions: Ember.observer('ac', function() {
     let self = this;
@@ -29,6 +24,9 @@ export default Ember.Component.extend({
       }
       if ((offset<400)&&(offset>=200)) {
         self.set('opacity', otherPercentage)
+      }
+      if (offset<-400||offset>400) {
+        self.set('opacity',.1);
       }
   })
 

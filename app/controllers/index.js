@@ -12,18 +12,14 @@ export default Ember.Controller.extend(Scrolling, {
     this.bindScrolling();
     let self = this;
 
-    this.setProperties({
-      ac:true
-    })
+    $(window).on('hashchange', function() {
+      self.scrolled();
+    });
   },
 
   willDestroy: function() {
     this.unbindScrolling();
   },
-
-  currentPathDidChange: function () {
-    console.log(this.get('currentPath'));
-  }.observes('currentPath'),
 
 
 
