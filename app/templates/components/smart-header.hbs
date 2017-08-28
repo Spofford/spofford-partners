@@ -1,39 +1,15 @@
 
-<div class="status" {{action "showContents"}}>
-
-  <div>The Public Sector Toolkit</div><img src="assets/images/chevron.png"><div class="highlight">{{sectionName}}</div>
-</div>
-<div class="contents-overlay">
-  <img src="assets/images/close.png" {{action "showContents"}} />
-  <div class="outline">
-  <h1>The Public Sector Toolkit</h1>
-    <ol class="top" type="I">
-    <li><a href="#section-2">Introduction</a></li>
-    <ol class="second" type="A">
-        <li>Getting Started</li>
-        <li>Continuing</li>
-        <li>Lastly</li>
-    </ol>
-    <li><a href="#section-3">Continuation</a></li>
-    <ol class="second" type="A">
-        <li>Getting Started</li>
-        <li>Continuing</li>
-        <li>Lastly</li>
-    </ol>
-    <li><a href="#section-3">Continuation</a></li>
-    <ol class="second" type="A">
-        <li>Getting Started</li>
-        <li>Continuing</li>
-        <li>Lastly</li>
-    </ol>
-    <li><a href="#section-3">Continuation</a></li>
-    <ol class="second" type="A">
-        <li>Getting Started</li>
-        <li>Continuing</li>
-        <li>Lastly</li>
-    </ol>
-    </ol>
-    </div>
-
-
+<div class="status">
+  <div>Spofford Partner Resources</div>
+  <img src="assets/images/chevron.png">
+  {{#if (eq routeName 'index')}}
+  <div>Home</div>
+  {{else}}
+  {{#link-to 'index' tagName="div" class="highlight"}}Home{{/link-to}}
+  <img src="assets/images/chevron.png">
+  {{#if (eq routeName 'experiments')}}Experiments{{/if}}
+  {{#if (eq routeName 'executive-summary')}}Executive Summary{{/if}}
+  {{#if (eq routeName 'pitch-deck')}}Pitch Deck{{/if}}
+  {{#if (eq routeName 'manufacturing-report')}}Manufacturing Report{{/if}}
+  {{/if}}
 </div>

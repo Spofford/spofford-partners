@@ -1,13 +1,9 @@
 <!-- Intro overlay -->
 
 {{welcome-overlay}}
-<div class="top-overlay"></div>
-<div class="bottom-overlay"></div>
-{{smart-header sectionName=sectionName}}
 
+{{smart-header sectionName=sectionName routeName=currentRouteName}}
 
-<div class="main-container">
-  {{ outlet }}
-</div>
+{{liquid-outlet class="main-container"}}
 
-<footer><i>Made with &#10084; for the City of Cambridge, Masssachusetts by <a href="http://www.amhasler.com">Adam Hasler</a></i></footer>
+<footer><i>Made with &#10084; for future partners of Spofford Design by <a href="http://www.amhasler.com">Adam Hasler</a></i></footer>

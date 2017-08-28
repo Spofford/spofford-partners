@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  sectionName: "Introduction",
-  graphName: "Getting Started",
-
+  appController: Ember.inject.controller('application'),
+  currentRouteName: Ember.computed.reads('appController.currentRouteName')
 });

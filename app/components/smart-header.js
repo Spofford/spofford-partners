@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     let self = this;
     $(window).on('hashchange', function() {
       self.set('fullScreen',false);
-    })
+    });
   },
   actions: {
     showContents() {

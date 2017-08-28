@@ -16,7 +16,6 @@ export default Ember.Controller.extend(Scrolling, {
   },
 
   scrolled: function() {
-    console.log('ping')
     let scrollTop = $(window).scrollTop();
     let sections = this.get("sections");
     let graphs = this.get("graphs");
@@ -29,7 +28,7 @@ export default Ember.Controller.extend(Scrolling, {
       if ($(this).offset().top<(scrollTop+150)&&($(this).offset().top+$(this).height())>scrollTop+150) {
         return this;
       }
-    })
+    });
 
     //console.log(curArticle[0].title);
     if(curSection){
