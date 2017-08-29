@@ -1,9 +1,25 @@
-MAIN PAGE
+<div class="block-container">
+  {{#link-to 'experiments' tagName="div" class="nav-block"}}
+    <div class="inner">
+      <h2>Experimental Process</h2>
+    </div>
+  {{/link-to}}
 
-<p>{{#link-to 'experiments'}}Experiments{{/link-to}}</p>
+  {{#link-to 'executive-summary' tagName="div" class="nav-block"}}
+    <div class="inner">
+      <h2>Executive Summary</h2>
+    </div>
+  {{/link-to}}
 
-<p>{{#link-to 'executive-summary'}}Executive Summary{{/link-to}}</p>
+  {{#link-to 'manufacturing-report' tagName="div" class="nav-block"}}
+    <div class="inner">
+      <h2>Manufacturing Report</h2>
+    </div>
+  {{/link-to}}
 
-<p>{{#link-to 'manufacturing-report'}}Manufacturing Report{{/link-to}}</p>
-
-<p>{{#link-to 'pitch-deck'}}Pitch Deck{{/link-to}}</p>
+  {{#link-to 'pitch-deck' tagName="div" class="nav-block"}}
+    <div class="inner">
+      <h2>Presentation Slide Deck</h2>
+    </div>
+  {{/link-to}}
+</div>

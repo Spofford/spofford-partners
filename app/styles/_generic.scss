@@ -9,6 +9,10 @@ body {
   width:100%;
   font-family: 'Libre Baskerville', serif;
 
+  h1, h2, h3 {
+    font-family: 'Lato', 'Helvetica', sans-serif;
+  }
+
   &::after {
     clear: both;
     content: "";
@@ -66,7 +70,7 @@ footer {
 }
 
 a, .highlight {
-  color:$dark-terra-cotta;
+  color:$main-green;
   text-decoration: underline;
 }
 
@@ -102,7 +106,7 @@ a, .highlight {
     }
     margin-top:15vh;
     border: 0;
-    background-color:$keppel;
+    background-color: $light-blue;
     display: inline-block;
     font-size:24px;
     font-family:"lato";
