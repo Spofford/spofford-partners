@@ -5,7 +5,7 @@ A short introduction of this app could easily go here.
 
 Pushing to master branch in Github will trigger build in Codeship.
 
-Try 3.
+Try 4. Change Pipeline.
 
 ## Prerequisites
 
