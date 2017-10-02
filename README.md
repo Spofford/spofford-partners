@@ -5,6 +5,8 @@ A short introduction of this app could easily go here.
 
 Pushing to master branch in Github will trigger build in Codeship.
 
+New test.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
