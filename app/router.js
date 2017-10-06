@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('executive-summary');
   this.route('experiments');
   this.route('pitch-deck');
-  this.route('manufacturing-report');
+  this.route('plan');
   this.route('index', { path: '' });
 });
 

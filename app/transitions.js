@@ -20,7 +20,7 @@ export default function(){
   );
   this.transition(
     this.fromRoute('index'),
-    this.toRoute('manufacturing-report'),
+    this.toRoute('plan'),
     this.use('fade'),
     this.reverse('fade')
   );
